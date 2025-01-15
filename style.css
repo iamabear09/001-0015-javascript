@@ -43,6 +43,7 @@ button {
 }
 
 .game__score {
+    /*TODO: width & height 고정 값 설정 필요*/
     font-size: 32px;
     background-color: coral;
     border: solid 3px black;
