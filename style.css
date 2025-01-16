@@ -36,6 +36,9 @@ button {
     border-radius: 10px;
     background-color: #ff9100;
 }
+.button-hidden {
+    visibility: hidden;
+}
 .game__header i {
     font-size: 24px;
 }
