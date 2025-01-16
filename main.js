@@ -24,7 +24,11 @@ function createImgTarget(type, top, left) {
 
 
     $target.addEventListener("click", (event) => {
-            if (event.target.classList.contains("game__bug")) onClickBug();
+            if (event.target.classList.contains("game__bug")) {
+                onClickBug();
+                return;
+            }
+
             onClickCarrot($target)
         }
     );
@@ -48,3 +52,10 @@ function onClickCarrot($carrot) {
         $popUp.classList.remove("pop-up-hidden");
     }
 }
+
+//TODO: 벌레 클릭해도 score 감소하는 것 수정
+//TODO: Pop Up Message 이후 게임 진행 안되도록 설정
+//TODO: 시간 제한 추가
+//TODO: game header button 클릭 시 모양 변경
+//TODO: 당근 화면 밖에서 생성되는 버그 수정 → 모르겠다...
+
