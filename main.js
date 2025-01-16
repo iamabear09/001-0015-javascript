@@ -9,6 +9,24 @@ $popUpBtn.addEventListener("click", () => {
     location.reload();
 })
 
+const $gameHeaderBtn = document.querySelector(".game__header > button");
+const $gameHeaderBtnIcon = document.querySelector(".game__header > button > i");
+$gameHeaderBtn.addEventListener("click", () => {
+    if ($gameHeaderBtnIcon.classList.contains("fa-play")) {
+        $gameHeaderBtnIcon.classList.remove("fa-play");
+        $gameHeaderBtnIcon.classList.add("fa-stop");
+        return;
+    }
+
+    if ($gameHeaderBtnIcon.classList.contains("fa-stop")) {
+        $gameHeaderBtnIcon.classList.remove("fa-stop");
+        $gameHeaderBtnIcon.classList.add("fa-play");
+    }
+
+    //TODO: Count Down 기능을 추가해야한다.
+
+})
+
 for (let i = 0; i < Number($score.textContent); i++) {
     $gameField.append(createImgTarget("bug", Math.random() * gameFieldRect.height, Math.random() * gameFieldRect.width));
     $gameField.append(createImgTarget("carrot", Math.random() * gameFieldRect.height, Math.random() * gameFieldRect.width));
@@ -53,9 +71,7 @@ function onClickCarrot($carrot) {
     }
 }
 
-//TODO: 벌레 클릭해도 score 감소하는 것 수정
 //TODO: Pop Up Message 이후 게임 진행 안되도록 설정
 //TODO: 시간 제한 추가
-//TODO: game header button 클릭 시 모양 변경
 //TODO: 당근 화면 밖에서 생성되는 버그 수정 → 모르겠다...
 
