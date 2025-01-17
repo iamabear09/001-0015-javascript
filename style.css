@@ -29,9 +29,18 @@ button {
     gap: 5px;
 }
 
-.game__header button, .game__header i {
+.game__header button {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ff9100;
+}
+.button-hidden {
+    visibility: hidden;
+}
+.game__header i {
     font-size: 24px;
-    border-radius: 5px;
 }
 
 .game__timer {
@@ -43,6 +52,9 @@ button {
 }
 
 .game__score {
+    width: 40px;
+    height: 40px;
+    text-align: center;
     font-size: 32px;
     background-color: coral;
     border: solid 3px black;
@@ -55,37 +67,54 @@ button {
     width: 100%;
     height: 100%;
     max-height: 250px;
+    position: relative;
 }
 
 .pop-up {
     margin: 0 auto;
-    text-align: center;
     width: 300px;
     height: 100px;
+    position: relative;
+    z-index: 3;
     transform: translateY(-150%);
     border-radius: 10px;
     padding: 20px;
-
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 
 }
 .pop-up button {
-    background: transparent;
+    background: beige;
+    border: solid 3px black;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
 }
 
 .pop-up i {
     font-size: 24px;
+    color: black;
 }
 
 .pop-up__message {
-    font-size: 24px;
+    font-size: 30px;
+    color: white;
 }
 
 .pop-up-hidden {
     display: none;
 }
 
+.game__bug {
+    position: absolute;
+    z-index: 2;
+}
+
+.game__carrot {
+    position: absolute;
+    z-index: 1;
+}
